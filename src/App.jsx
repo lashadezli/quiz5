@@ -11,13 +11,17 @@ function App() {
 
     const nextPageHandler = () => {
         setActiveState(activeState + 1);
-    }
+    };
+
+    const goBackHandler = () => {
+      setActiveState(activeState -1);
+    };
 
   return (
     <div className={classes['form-wrapper']}>
       <SideBar activeState={activeState} />
         {activeState === 1 && <YourInfo onNext={nextPageHandler}/>}
-        {activeState === 2 && <SelectPlan />}
+        {activeState === 2 && <SelectPlan onNext={nextPageHandler} onBack={goBackHandler}/>}
         {activeState === 3 && <AddOns />}
         {activeState === 4 && <Summary />}
     </div>

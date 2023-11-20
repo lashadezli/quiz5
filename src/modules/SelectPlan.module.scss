@@ -1,42 +1,48 @@
 .select-plan-wrapper {
   margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   h1 {
     color: #002A5E;
     font-size: 38px;
+    margin-left: 130px;
   }
   p {
     color: rgba(0, 0, 0, 0.43);
+    margin-left: 130px;
     font-weight: bold;
     margin-top: 10px;
   }
   .options-wrapper {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
+   margin-top: 1.8rem;
+   display: flex;
+   margin-left: 90px;
+   margin-top: 30px;
     .option {
       cursor: pointer;
       background-color: rgba(239, 239, 239, 0.44);
       border: 2px solid rgba(239, 239, 239, 0.44);
       display: flex;
       flex-direction: column;
-      width: 150px;
-      height: 200px;
+      width: 100px;
+      height: 150px;
       padding: 20px;
       border-radius: 10px;
       transition: 0.2s;
+      margin-left: 40px;
+      &.selected
+      {
+        border: 2px solid red;
+      }
       &:hover {
-        //border: 2px solid #8d87ce;
-        //background-color: rgba(202, 202, 202, 0.44);
+        border: 2px solid #8d87ce;
+        background-color: rgba(202, 202, 202, 0.44);
         transform: translateY(-10px);
         box-shadow: 5px 5px 10px rgba(83, 76, 153, 0.3);
       }
       h3 {
-        margin-top: 120px;
+        margin-top: 65px;
       }
       span {
         color: rgba(0, 0, 0, 0.34);
@@ -50,8 +56,9 @@
   }
 
   .actions-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-left: 160px;
     .back {
       width: fit-content;
       background-color: #f1f1f1;
